@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Crea tu pedido!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>¡Crea tu pedido!</h1>
+
+  <h2>Ingredientes básicos (incluidos en todos los pedidos):</h2>
+  <ul class="list-group">
+    <li class="list-group-item">Base Masa ($0.50)</li>
+    <li class="list-group-item">Queso Mozzarella ($0.25)</li>
+    <li class="list-group-item">Tomate ($0.25)</li>
+  </ul>
+
+  <h2>Selecciona los ingredientes adicionales:</h2>
+  <div id="menu">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <input type="checkbox" id="champinones" value="1.50" onchange="calcularTotal()">
+        <label for="champinones">Champiñones ($1.50)</label>
+      </li>
+      <li class="list-group-item">
+        <input type="checkbox" id="bacon" value="2.00" onchange="calcularTotal()">
+        <label for="bacon">Bacon ($2.00)</label>
+      </li>
+      <li class="list-group-item">
+        <input type="checkbox" id="italianos" value="2.00" onchange="calcularTotal()">
+        <label for="italianos">Embutidos italianos ($2.00)</label>
+      </li>
+      <li class="list-group-item">
+        <input type="checkbox" id="picantes" value="2.00" onchange="calcularTotal()">
+        <label for="picantes">Embutidos picantes ($2.00)</label>
+      </li>
+      <li class="list-group-item">
+        <input type="checkbox" id="vegetales" value="2.00" onchange="calcularTotal()">
+        <label for="vegetales">Vegetales encurtidos ($2.00)</label>
+      </li>
+    </ul>
+  </div>
+
+  <textarea id="notas" class="form-control" placeholder="Agrega alguna nota..."></textarea>
+
+  <div id="total">Total: $<span id="precioTotal">0.00</span></div>
+
+  <!-- <button class="btn btn-primary" onclick="generarPDF()">Generar Pedido y Descargar PDF</button> -->
+  <button class="btn btn-primary" onclick="generarPDF()">Generar Pedido - WhatsApp</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

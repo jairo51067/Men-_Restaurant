@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html,
+body {
+  font-size: 18px;
+}
+
+body {
+  
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#total {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+@media screen and (max-width:768px) {
+
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:350px) {
+
+  html,
+  body {
+    font-size: 14px;
+  }
+}
