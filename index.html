@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Crea tu pedido!</title>
+  <title>Bienvenido a Pizzas Deliciosas</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<body>
-  <h1>¡Crea tu pedido!</h1>
 
-  <h2>Ingredientes básicos (incluidos en todos los pedidos):</h2>
-  <ul class="list-group">
-    <li class="list-group-item">Base Masa ($0.50)</li>
-    <li class="list-group-item">Queso Mozzarella ($0.25)</li>
-    <li class="list-group-item">Tomate ($0.25)</li>
-  </ul>
+<body class="bg-dark">
+  <header class="bg-dark text-white text-center d-md-flex justify-content-around align-self-center p-4">
+    <h1>Pizzas Deliciosas</h1>
+    <nav class="align-content-center ">
+      <a href="#menu" class="text-white"> Menú</a> |
+      <a href="#about" class="text-white"> Sobre Nosotros</a> |
+      <a href="#contact" class="text-white"> Contáctanos</a>
+      <br><br>
+      <a href="pedido.html" class="text-warning"> Haz tu Pedido</a>
+    </nav>
+  </header>
 
-  <h2>Selecciona los ingredientes adicionales:</h2>
-  <div id="menu">
-    <ul class="list-group">
-      <li class="list-group-item">
-        <input type="checkbox" id="champinones" value="1.50" onchange="calcularTotal()">
-        <label for="champinones">Champiñones ($1.50)</label>
-      </li>
-      <li class="list-group-item">
-        <input type="checkbox" id="bacon" value="2.00" onchange="calcularTotal()">
-        <label for="bacon">Bacon ($2.00)</label>
-      </li>
-      <li class="list-group-item">
-        <input type="checkbox" id="italianos" value="2.00" onchange="calcularTotal()">
-        <label for="italianos">Embutidos italianos ($2.00)</label>
-      </li>
-      <li class="list-group-item">
-        <input type="checkbox" id="picantes" value="2.00" onchange="calcularTotal()">
-        <label for="picantes">Embutidos picantes ($2.00)</label>
-      </li>
-      <li class="list-group-item">
-        <input type="checkbox" id="vegetales" value="2.00" onchange="calcularTotal()">
-        <label for="vegetales">Vegetales encurtidos ($2.00)</label>
-      </li>
-    </ul>
-  </div>
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2018/07/08/17177-278954650_tiny.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+    <div class="hero-content">
+      <h2>¡Bienvenido a Pizzas Deliciosas!</h2>
+      <p>Disfruta de las mejores pizzas hechas con amor y los ingredientes más frescos.</p>
+      <a href="pedido.html" class="btn btn-primary">Haz tu Pedido Ahora</a>
+    </div>
+  </section>
 
-  <textarea id="notas" class="form-control" placeholder="Agrega alguna nota..."></textarea>
+  <section id="menu" class="container-fluid text-center p-4 pb-4">
+    <h2 class="p-4 text-uppercase font-weight-bold text-warning font-monospace">Nuestro Menú</h2>
+    <div class="menu-item">
+      <h3>Pizza Margarita</h3>
+      <p>Tomate, mozzarella y albahaca fresca. $10.00</p>
+    </div>
+    <div class="menu-item">
+      <h3>Pizza Pepperoni</h3>
+      <p>Deliciosas rodajas de pepperoni y queso. $12.00</p>
+    </div>
+    <div class="menu-item">
+      <h3>Pizza Cuatro Quesos</h3>
+      <p>Una mezcla irresistible de quesos. $14.00</p>
+    </div>
+    <div class="menu-item">
+      <h3>Pizza Vegetariana</h3>
+      <p>Con verduras frescas y queso. $11.00</p>
+    </div>
+    <a href="pedido.html" class="btn btn-warning m-4">Haz tu Pedido Ahora</a>
+  </section>
 
-  <div id="total">Total: $<span id="precioTotal">0.00</span></div>
+  <section id="testimonials" class="container-fluid text-center bg-white p-5">
+    <h2 class="text-warning font-weight-bold">Lo Que Dicen Nuestros Clientes</h2>
+    <blockquote>
+      <p class="text-black">"Las mejores pizzas que he probado. ¡Volveré sin duda!" - Juan P.</p>
+    </blockquote>
+    <blockquote>
+      <p class="text-black">"El servicio es excelente y la comida es deliciosa." - María G.</p>
+    </blockquote>
+  </section>
 
-  <!-- <button class="btn btn-primary" onclick="generarPDF()">Generar Pedido y Descargar PDF</button> -->
-  <button class="btn btn-primary" onclick="generarPDF()">Generar Pedido - WhatsApp</button>
+  <section id="about" class="container-fluid text-center text-white p-4">
+    <h2 class="text-warning font-weight-bold">Sobre Nosotros</h2>
+    <p>En Pizzas Deliciosas, nos apasiona ofrecerte las mejores pizzas, hechas con ingredientes frescos y recetas
+      tradicionales. Desde nuestro inicio, hemos trabajado para brindarte una experiencia culinaria única.</p>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="contact" class="container-fluid  bg-white p-4">
+    <div class="row align-items-center flex-column flex-lg-row text-center">
+      <div class="col">
+        <h2 class="text-warning font-weight-bold">Contáctanos</h2>
+        <p>Dirección: Calle Falsa 123, Ciudad</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+      <br><br>
+      <form class="col p-4">
+        <p class="font-weight-bold">¡Nos gustaria tu opinion.!!!</p>
+        <div class="form-group text-justify font-weight-bold">
+          <label for="name">Nombre:</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group text-justify font-weight-bold">
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group text-justify font-weight-bold">
+          <label for="message">Mensaje:</label>
+          <textarea class="form-control" id="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark w-100">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2024 Pizzas Deliciosas. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
