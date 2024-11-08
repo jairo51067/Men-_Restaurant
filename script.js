@@ -139,7 +139,7 @@ async function generarPDF() {
   doc.text(notas || "No hay notas", 10, (yPosition += 10));
 
   // Generar el PDF
-  doc.save("pedido.pdf");
+  // doc.save("pedido.pdf");
 
   // Enviar a WhatsApp
   const whatsappNumber = "5804161709611"; // Número de WhatsApp del negocio
