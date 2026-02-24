@@ -55,9 +55,8 @@ Este proyecto está bajo la Licencia MIT.
 
 Este proyecto fue desarrollado por **Jairo Cárdenas**.  
 Si tienes preguntas o sugerencias, contáctame:
-
--Correo electrónico: [jairo.cardenas.dev@gmail.com](mailto:jairo.cardenas.dev@gmail.com) 
-
+- Correo electrónico: [jairo.cardenas.dev@gmail.com](mailto:jairo.cardenas.dev@gmail.com) 
 - GitHub: [@jairo51067](https://github.com/jairo51067) 
+
 
 
