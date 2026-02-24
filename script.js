@@ -142,7 +142,7 @@ async function generarPDF() {
   // doc.save("pedido.pdf");
 
   // Enviar a WhatsApp
-  const whatsappNumber = "5804161709611"; // Número de WhatsApp del negocio
+  const whatsappNumber = "5804141580812"; // Número de WhatsApp del negocio
   let mensaje =
     `Hola, aquí está mi pedido:\n\n` +
     `Pizza Margarita: ${margaritaQty} x $10.00\n` +
