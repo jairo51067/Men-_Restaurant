@@ -208,3 +208,41 @@ function borrarPedido() {
     "success"
   );
 }
+
+// TODO: Borramos el mensaje del formulario de nuestro cliente
+
+// Escuchamos el evento 'submit' del formulario
+  const formulario = document.querySelector("form");
+
+  formulario.addEventListener("submit", function(event) {
+    event.preventDefault(); // Evitamos que la página se recargue normalmente
+
+    // Recogemos los datos del formulario
+    const datos = new FormData(formulario);
+
+    // Enviamos los datos a Formspree usando fetch (AJAX)
+    fetch(formulario.action, {
+      method: formulario.method,
+      body: datos,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(function(response) {
+      if (response.ok) {
+        // Si el envío fue exitoso:
+        alert("¡Mensaje enviado correctamente!"); // Opcional: mensaje de confirmación
+        formulario.reset(); // <-- Esto limpia todos los campos del formulario
+      } else {
+        // Si hubo algún error
+        response.json().then(function(data) {
+          if (Object.hasOwn(data, 'errors')) {
+            alert(data.errors.map(error => error.message).join(", "));
+          } else {
+            alert("¡Ocurrió un problema al enviar el formulario!");
+          }
+        });
+      }
+    }).catch(function(error) {
+      alert("¡Ocurrió un problema de conexión!");
+    });
+  });
